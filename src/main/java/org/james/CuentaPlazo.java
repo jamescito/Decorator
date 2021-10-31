@@ -14,7 +14,8 @@ public class CuentaPlazo extends Decorador {
 
     public void aplicaIntereses() {
         double saldoActual = super.saldo();
-        System.out.print("Su saldo después del plazo será de: " + (saldoActual + (saldoActual*(interes / 100) * plazo)));
+        System.out.print("Su saldo después del plazo será de: " +
+         (saldoActual + (saldoActual*(interes / 100) * plazo)));
     }
 
     public double getInteres() {

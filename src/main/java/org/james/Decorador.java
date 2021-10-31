@@ -3,37 +3,21 @@ package org.james;
 public abstract class Decorador implements Cuenta {
     private Cuenta cuenta;
 
-    public Decorador(Cuenta cuenta) {
-        this.cuenta = cuenta;
-    }
+    public Decorador(Cuenta cuenta) {this.cuenta = cuenta;}
 
-    public void setCuenta(Cuenta cuenta) {
-        this.cuenta = cuenta;
-    }
+    public void setCuenta(Cuenta cuenta) {this.cuenta = cuenta;}
 
-    public Cuenta getCuenta() {
-        return cuenta;
-    }
+    public Cuenta getCuenta() {return cuenta;}
 
-    public double saldo() {
-        return cuenta.saldo();
-    }
+    public double saldo() {return cuenta.saldo();}
 
-    public void ingresar(double cantidad) {
-        cuenta.ingresar(cantidad);
-    }
+    public void ingresar(double cantidad) {cuenta.ingresar(cantidad);}
 
-    public void retirar(double cantidad) {
-        cuenta.retirar(cantidad);
-    }
+    public void retirar(double cantidad) {cuenta.retirar(cantidad);}
 
-    public Cliente getCliente() {
-        return cuenta.getCliente();
-    }
+    public Cliente getCliente() {return cuenta.getCliente();}
 
-    public Fecha getFecApe() {
-        return cuenta.getFecApe();
-    }
+    public Fecha getFecApe() {return cuenta.getFecApe(); }
 
     @Override
     public String toString() {
