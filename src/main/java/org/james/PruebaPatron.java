@@ -12,13 +12,13 @@ public class PruebaPatron {
         // ahora las envolvemos para que sean del tipo cuenta que necesitemos
         // cuenta corriente con el número de la tarjeta de crédito
         Decorador cc = new CuentaCorriente(c1, "1111222233334444");
-        System.out.println("\n\nCuenta corriente: " + cc.toString());
+        System.out.println("\n\nCuenta corriente: " + cc.getCliente().getNombre());
         System.out.println("Su saldo actual es: " + cc.saldo());
         // cuenta a plazo con un interés del 3% y una duración de 2 años
         Decorador cp = new CuentaPlazo(c2, 3, 2);
-        System.out.println("\n\nCuenta a plazo: " + cp.toString());
+        System.out.println("\n\nCuenta a plazo: " + cp.getCuenta().getCliente().getNombre());
         System.out.println("Su saldo actual es: " + cp.saldo());
         cp.aplicaIntereses();
-        System.out.println("Su saldo después del plazo será de: " + cp.saldo());
+       // System.out.println("Su saldo después del plazo será de: " + cp.saldo());
     }
 }
