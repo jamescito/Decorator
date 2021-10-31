@@ -1,1 +1,3 @@
 # Decorator
+
+[Documentación](Decorator.md)
